@@ -1,0 +1,32 @@
+<div class="recent-draws-info-container">
+    <div class="title">
+        {{title}}
+    </div>
+    <div class="draws">
+        <div class="draw" *ngFor="let recentDraw of recentDraws">
+            <div class="date">{{recentDraw.date}}</div>
+            <div class="pot"><img src="/assets/icons/btc.png">{{recentDraw.cryptoPot}} BTC<img
+                    src="/assets/icons/btc.png"></div>
+            <div class="status" *ngIf="recentDraw.status">
+                <div class="placeholder">STATUS</div>
+                <div class="value"><div *ngIf="recentDraw.status === 'WIN'" class="win">{{recentDraw.status}}</div><div *ngIf="recentDraw.status === 'LOOSE'" class="loose">{{recentDraw.status}}</div></div>
+            </div>
+            <div class="bet-number" *ngIf="recentDraw.bet?.crypto && recentDraw.bet?.dollars">
+                <div class="placeholder">MY BET</div>
+                <div class="value">{{recentDraw.bet?.crypto}} BTC / {{recentDraw.bet?.dollars}} USD</div>
+            </div>
+            <div class="draw-number">
+                <div class="placeholder">DRAW #</div>
+                <div class="value">{{recentDraw.drawNumber}}</div>
+            </div>
+            <div class="participants">
+                <div class="placeholder">PARTICIPANTS</div>
+                <div class="value">{{recentDraw.participants}}</div>
+            </div>
+            <div class="winner">
+                <div class="placeholder">WINNER</div>
+                <div class="value">{{recentDraw.winner}}</div>
+            </div>
+        </div>
+    </div>
+</div>

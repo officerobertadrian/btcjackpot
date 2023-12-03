@@ -1,0 +1,58 @@
+<div class="draw-info-container-desktop">
+    <div *ngIf="!(userIsConnected | async)" class="connect-wallet-button" (click)="connectToWallet()">
+        <img class="crypto-wallet-icon" src="/assets/icons/crypto-wallet.png">
+        <div class="placeholder">CONNECT YOUR WALLET</div>
+    </div>
+    <div class="pot">
+        <div class="icon">
+            <img class="coins-icon" src="/assets/icons/btc.png">
+        </div>
+        <div class="container">
+            <div class="placeholder">Jackpot</div>
+            <div class="value crypto" *ngIf="drawInfo?.pot?.crypto">{{drawInfo?.pot?.crypto}} BTC</div>
+            <div class="value" *ngIf="drawInfo?.pot?.dollars">USD {{drawInfo?.pot?.dollars}}</div>
+        </div>
+    </div>
+    <div class="timeleft">
+        <div class="icon">
+            <img class="clock-icon" src="/assets/icons/hourglass.png">
+        </div>
+        <div class="container">
+            <app-countdown [countDownDate]="drawInfo?.date"></app-countdown>
+        </div>
+    </div>
+    <div class="button-container">
+        <app-button [buttonType]="'raised'" [buttonBackground]="'yellow'" [buttonText]="'PLAY NOW'"
+            (onClick)="playNow()"></app-button>
+    </div>
+</div>
+
+<div class="draw-info-container-mobile">
+    <div *ngIf="!(userIsConnected | async)" class="connect-wallet-button" (click)="connectToWallet()">
+        <img class="crypto-wallet-icon" src="/assets/icons/crypto-wallet.png">
+        <div class="placeholder">CONNECT YOUR WALLET</div>
+    </div>
+    <div class="pot">
+        <div class="icon">
+            <img class="coins-icon" src="/assets/icons/btc.png">
+        </div>
+        <div class="container">
+            <div class="placeholder">Jackpot</div>
+            <div class="value crypto" *ngIf="drawInfo?.pot?.crypto">{{drawInfo?.pot?.crypto}} BTC</div>
+            <div class="value" *ngIf="drawInfo?.pot?.dollars">USD {{drawInfo?.pot?.dollars}}</div>
+        </div>
+    </div>
+    <div class="timeleft">
+        <div class="icon">
+            <img class="clock-icon" src="/assets/icons/hourglass.png">
+        </div>
+        <div class="container">
+            <div class="placeholder">
+                Next draw in:
+            </div>
+            <app-countdown [countDownDate]="drawInfo?.date"></app-countdown>
+        </div>
+    </div>
+    <app-button [buttonType]="'raised'" [buttonBackground]="'yellow'" [buttonText]="'PLAY NOW'"
+        (onClick)="playNow()"></app-button>
+</div>

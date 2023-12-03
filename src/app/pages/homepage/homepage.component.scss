@@ -1,0 +1,53 @@
+@import '../../../assets/scss/color-variables';
+@import '../../../assets/scss/radius-variables';
+@import '../../../assets/scss/spacers-variables';
+@import '../../../assets/scss/fonts-variables';
+
+@media (max-width:1150px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        app-banner {
+            margin-top: $spacer-s;
+        }
+
+        app-draw-info {
+            margin: 0 0 $spacer-xl 0;
+        }
+
+        app-recent-draws {
+            margin-bottom: $spacer-xl;
+        }
+    }
+}
+
+@media (min-width:1151px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        app-draw-info {
+            margin: -$spacer-m 0 $spacer-verry-large 0;
+        }
+
+        app-recent-draws {
+            margin: $spacer-verry-large 0;
+        }
+
+        app-how-it-works {
+            margin-bottom: $spacer-verry-large;
+        }
+    }
+}

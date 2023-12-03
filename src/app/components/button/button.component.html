@@ -1,0 +1,5 @@
+<div class="button"
+    [ngClass]="{'outlined': buttonType === 'outlined', 'raised' : buttonType === 'raised', 'white': buttonBackground === 'white', 'light': buttonBackground === 'light', 'red': buttonBackground === 'red', 'yellow': buttonBackground === 'yellow' }"
+    (click)="onClickButton()">
+    {{buttonText}}
+</div>

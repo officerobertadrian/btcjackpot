@@ -1,0 +1,292 @@
+@import '../../../assets/scss/color-variables';
+@import '../../../assets/scss/radius-variables';
+@import '../../../assets/scss/spacers-variables';
+@import '../../../assets/scss/fonts-variables';
+
+@media (max-width:1150px) {
+    .draw-info-container-mobile {
+        display: block;
+    }
+
+    .draw-info-container-desktop {
+        display: none !important;
+    }
+}
+
+@media (min-width:1151px) {
+    .draw-info-container-mobile {
+        display: none !important;
+    }
+
+    .draw-info-container-desktop {
+        display: block;
+    }
+}
+
+:host {
+    width: 100%;
+}
+
+.draw-info-container-desktop {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: $spacer-m;
+    border-radius: $radius-xxl;
+    background: $secondary;
+    font-weight: 800;
+    margin: 0 auto;
+    position: relative;
+
+    .connect-wallet-button {
+        padding: $spacer-m $spacer-xxl;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: $primary-dark;
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom-left-radius: $radius-verry-large;
+        border-bottom-right-radius: $radius-verry-large;
+        cursor: pointer;
+        font-weight: 800;
+
+        &:hover {
+            background: $yellow;
+        }
+
+        .crypto-wallet-icon {
+            width: 36px;
+            height: 36px;
+            margin-right: $spacer-l;
+        }
+
+        .placeholder {
+            color: $white;
+        }
+    }
+
+    .pot {
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            margin-right: $spacer-l;
+
+            .coins-icon {
+                width: 64px;
+                height: 64px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            .dollar-icon {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .container {
+            .placeholder {
+                font-size: $font-l;
+                color: $white;
+            }
+
+            .value {
+                font-size: $font-m;
+                color: $white;
+
+                &.crypto {
+                    font-size: $font-xxl;
+                    color: $yellow;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+
+    .timeleft {
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            margin-right: $spacer-l;
+
+            .clock-icon {
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .placeholder {
+                font-size: $font-l;
+                color: $white;
+                margin-bottom: $spacer-s;
+            }
+        }
+    }
+
+    .button-container {
+        width: 33%;
+        padding: 0 $spacer-xxl;
+        box-sizing: border-box;
+    }
+}
+
+.draw-info-container-mobile {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $spacer-m $spacer-m $spacer-m;
+    border-radius: $radius-xxl;
+    background: $secondary;
+    font-weight: 800;
+    margin: 0 auto;
+
+    .connect-wallet-button {
+        width: calc(100% + 24px);
+        display: flex;
+        height: 56px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #0F0F33, #5E4BF2);
+        border-top-right-radius: $radius-xxl;
+        border-top-left-radius: $radius-xxl;
+        color: $white;
+
+        .crypto-wallet-icon {
+            width: 36px;
+            height: 36px;
+            margin-right: $spacer-s;
+        }
+
+        .placeholder {
+            color: $white;
+        }
+    }
+
+    .pot {
+        width: 100%;
+        padding: $spacer-m $spacer-l;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $yellow;
+
+        .icon {
+            position: relative;
+            width: 56px;
+            height: 56px;
+            margin-right: $spacer-m;
+
+            .coins-icon {
+                width: 56px;
+                height: 56px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            .dollar-icon {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .placeholder {
+                font-size: $font-l;
+                color: $white;
+            }
+
+            .value {
+                font-size: $font-m;
+                color: $white;
+
+                &.crypto {
+                    font-size: $font-xxl;
+                    color: $yellow;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+
+    .timeleft {
+        width: 100%;
+        padding: $spacer-m $spacer-l;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .icon {
+            position: relative;
+            width: 56px;
+            height: 56px;
+            margin-right: $spacer-m;
+
+            .clock-icon {
+                width: 56px;
+                height: 56px;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+
+            .placeholder {
+                font-size: $font-l;
+                color: $white;
+            }
+        }
+    }
+
+    app-button {
+        width: 100%;
+    }
+}

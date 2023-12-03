@@ -1,0 +1,113 @@
+@import '../../../assets/scss/color-variables';
+@import '../../../assets/scss/radius-variables';
+@import '../../../assets/scss/spacers-variables';
+@import '../../../assets/scss/fonts-variables';
+
+@media (max-width:1150px) {
+    .how-it-works-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: $white;
+        padding: $spacer-l;
+        box-sizing: border-box;
+
+        .title {
+            font-size: $font-m;
+            font-weight: 800;
+            margin-bottom: $spacer-xl;
+        }
+
+        .box-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+
+            .box {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                box-sizing: border-box;
+                background: $secondary;
+                border-radius: $radius-l;
+                padding: $spacer-l;
+                margin-bottom: $spacer-xl;
+
+                &:last-child {
+                    margin-bottom: unset;
+                }
+
+                .icon {
+                    width: 36px;
+                    height: 36px;
+                    margin-right: $spacer-l;
+                }
+
+                .text {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1151px) {
+    .how-it-works-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: $white;
+        padding: $spacer-l;
+        box-sizing: border-box;
+
+        .title {
+            font-size: $font-l;
+            font-weight: 800;
+            margin-bottom: $spacer-xl;
+        }
+
+        .box-container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            box-sizing: border-box;
+
+            .box {
+                width: 20%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                box-sizing: border-box;
+                background: $secondary;
+                border-radius: $radius-l;
+                padding: $spacer-l;
+
+                .icon {
+                    width: 36px;
+                    height: 36px;
+                    margin-right: $spacer-l;
+                }
+
+                .text {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+:host {
+    width: 100%;
+}

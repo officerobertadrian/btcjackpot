@@ -1,0 +1,68 @@
+@import '../../../assets/scss/color-variables';
+@import '../../../assets/scss/radius-variables';
+@import '../../../assets/scss/spacers-variables';
+@import '../../../assets/scss/fonts-variables';
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: $spacer-m $spacer-l;
+    border-radius: $radius-xl;
+    color: white;
+    font-weight: bold;
+    font-size: $font-m;
+    cursor: pointer;
+
+    &.outlined {
+        &.white {
+            background: $white;
+            color: $yellow;
+
+            &:hover {
+                color: $yellow;
+                background: $white;
+            }
+        }
+
+        &.light {
+            border: 3px solid $primary-light;
+            &:hover {
+                background: $yellow;
+                color: $white;
+            }
+        }
+    }
+
+    &.raised {
+        &.white {
+            background: $white;
+            color: $yellow;
+
+            &:hover {
+                color: $yellow;
+                background: $white;
+            }
+        }
+
+        &.red {
+            background: $red;
+
+            &:hover {
+                color: $yellow;
+                background: $white;
+            }
+        }
+
+        &.yellow {
+            background: $yellow;
+
+            &:hover {
+                color: $yellow;
+                background: $white;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,73 @@
+@import '../../../assets/scss/color-variables';
+@import '../../../assets/scss/radius-variables';
+@import '../../../assets/scss/spacers-variables';
+@import '../../../assets/scss/fonts-variables';
+
+@media (max-width:1150px) {
+    .footer-container {
+        padding: $spacer-m;
+        .navigation {
+            display: none;
+        }
+
+        .copyright {
+            color: $white;
+            font-size: $font-s;
+        }
+
+        .logo {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+@media (min-width:1151px) {
+    .footer-container {
+        padding: $spacer-l;
+        .copyright {
+            font-weight: 600;
+            font-size: $font-m;
+            color: $white;
+        }
+
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            .item {
+                font-weight: 600;
+                font-size: $font-m;
+                color: $white;
+                margin-right: $spacer-xl;
+                cursor: pointer;
+
+                &:last-child {
+                    margin-right: unset;
+                }
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+        .logo {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
+
+:host {
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: $primary-dark;
+}

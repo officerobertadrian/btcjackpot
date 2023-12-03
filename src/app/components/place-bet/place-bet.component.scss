@@ -1,0 +1,281 @@
+@import '../../../assets/scss/color-variables';
+@import '../../../assets/scss/radius-variables';
+@import '../../../assets/scss/spacers-variables';
+@import '../../../assets/scss/fonts-variables';
+
+@media (max-width:1150px) {
+    .place-bet-container {
+        width: 100%;
+        height: calc(100% - 120px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $spacer-l;
+        box-sizing: border-box;
+
+        .box-container {
+            width: 100%;
+            padding: $spacer-l $spacer-m;
+            border-radius: $radius-xxl;
+            background: $secondary;
+            font-weight: 800;
+            margin: 0 auto;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .date {
+                font-size: $font-l;
+                font-weight: 800;
+                color: $white;
+                margin-bottom: $spacer-m;
+            }
+
+            .hour {
+                font-size: $font-m;
+                font-weight: 800;
+                color: $white;
+                margin-bottom: $spacer-m;
+            }
+
+            .prize {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                font-size: $font-xxl;
+                font-weight: 800;
+                color: $yellow;
+                margin-bottom: $spacer-xl;
+
+                .win-icon {
+                    width: 48px;
+                    height: 48px;
+                    margin: 0 $spacer-l;
+                }
+
+                .prizes {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .dollars-pot {
+                        color: $white;
+                        font-size: $font-s;
+                    }
+                }
+            }
+
+            .draw {
+                margin-bottom: $spacer-m;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+
+                .placeholder {
+                    color: $white;
+                    font-size: $font-s;
+                }
+
+                .value {
+                    color: $white;
+                    font-size: $font-s;
+                    font-weight: bold;
+                }
+            }
+
+            .participants {
+                margin-bottom: $spacer-xl;
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .placeholder {
+                    color: $white;
+                    font-size: $font-s;
+                }
+
+                .value {
+                    color: $white;
+                    font-size: $font-s;
+                    font-weight: bold;
+                }
+            }
+
+            .place-bet {
+                margin-bottom: $spacer-l;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .placeholder {
+                    color: $white;
+                    font-size: $font-s;
+                    margin-bottom: $spacer-s;
+                }
+
+                .input {
+                    color: $white;
+                    font-size: $font-s;
+                    font-weight: bold;
+                }
+            }
+
+            app-button {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media (min-width:1151px) {
+    .place-bet-container {
+        width: 100%;
+        height: calc(100% - 170px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $spacer-xl;
+        box-sizing: border-box;
+
+        .box-container {
+            width: 70%;
+            padding: $spacer-l;
+            border-radius: $radius-xxl;
+            background: $secondary;
+            font-weight: 800;
+            margin: 0 auto;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .date {
+                font-size: $font-xxl;
+                font-weight: 800;
+                color: $white;
+                margin-bottom: $spacer-l;
+            }
+
+            .hour {
+                font-size: $font-xl;
+                font-weight: 800;
+                color: $white;
+                margin-bottom: $spacer-l;
+            }
+
+            .prize {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                font-size: $font-extra-verry-large;
+                font-weight: 800;
+                color: $yellow;
+                margin-bottom: $spacer-verry-large;
+
+                .win-icon {
+                    width: 56px;
+                    height: 56px;
+                    margin: 0 $spacer-xl;
+                }
+
+                .prizes {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .dollars-pot {
+                        color: $white;
+                        font-size: $font-m;
+                        margin-top: -12px;
+                    }
+                }
+            }
+
+            .draw {
+                margin-bottom: $spacer-xxl;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+
+                .placeholder {
+                    color: $white;
+                    font-size: $font-l;
+                }
+
+                .value {
+                    color: $white;
+                    font-size: $font-l;
+                    font-weight: bold;
+                }
+            }
+
+            .participants {
+                margin-bottom: $spacer-xxl;
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .placeholder {
+                    color: $white;
+                    font-size: $font-l;
+                }
+
+                .value {
+                    color: $white;
+                    font-size: $font-l;
+                    font-weight: bold;
+                }
+            }
+
+            .place-bet {
+                margin-bottom: $spacer-xxl;
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .placeholder {
+                    color: $white;
+                    font-size: $font-l;
+                }
+
+                .input {
+                    color: $white;
+                    font-size: $font-l;
+                    font-weight: bold;
+                }
+            }
+
+            app-button {
+                width: 80%;
+                margin-top: $spacer-xxl;
+            }
+        }
+    }
+}
+
+:host {
+    width: 100%;
+}

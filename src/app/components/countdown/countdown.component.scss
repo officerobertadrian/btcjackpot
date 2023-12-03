@@ -1,0 +1,62 @@
+@import '../../../assets/scss/color-variables';
+@import '../../../assets/scss/radius-variables';
+@import '../../../assets/scss/spacers-variables';
+@import '../../../assets/scss/fonts-variables';
+
+@media (max-width:1150px) {
+    .countdown-container {
+        font-size: $font-l !important;
+
+        .divider {
+            margin: 2px!important;
+        }
+
+        .hours,
+        .minutes,
+        .seconds {
+            .value {
+                border-radius: unset!important;
+                padding: $spacer-xs!important;
+                margin: 2px !important;
+            }
+        }
+    }
+}
+
+@media (min-width:1151px) {}
+
+:host {
+    width: 100%;
+}
+
+
+.countdown-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-size: $font-xl;
+    font-weight: 800;
+    width: 100%;
+
+    .divider {
+        margin: $spacer-xxs;
+    }
+
+    .hours,
+    .minutes,
+    .seconds {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .value {
+            border-radius: $radius-s;
+            padding: $spacer-s;
+            background: $primary-dark;
+            margin: $spacer-xxs;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<div class="countdown-container">
+    <div class="hours">
+        <ng-container *ngIf="(hours | async)?.length === 1; else multipleHours">
+            <div class="value">0</div>
+            <div class="value" *ngFor="let digit of (hours | async)">{{digit}}</div>
+        </ng-container>
+        <ng-template #multipleHours>
+            <div class="value" *ngFor="let digit of (hours | async)">{{digit}}</div>
+        </ng-template>
+    </div>
+    <div class="divider">:</div>
+    <div class="minutes">
+        <ng-container *ngIf="(minutes | async)?.length === 1; else multipleMinutes">
+            <div class="value">0</div>
+            <div class="value" *ngFor="let digit of (minutes | async)">{{digit}}</div>
+        </ng-container>
+        <ng-template #multipleMinutes>
+            <div class="value" *ngFor="let digit of (minutes | async)">{{digit}}</div>
+        </ng-template>
+    </div>
+    <div class="divider">:</div>
+    <div class="seconds">
+        <ng-container *ngIf="(seconds | async)?.length === 1; else multipleSeconds">
+            <div class="value">0</div>
+            <div class="value" *ngFor="let digit of (seconds | async)">{{digit}}</div>
+        </ng-container>
+        <ng-template #multipleSeconds>
+            <div class="value" *ngFor="let digit of (seconds | async)">{{digit}}</div>
+        </ng-template>
+    </div>
+</div>

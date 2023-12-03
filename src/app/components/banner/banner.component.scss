@@ -1,0 +1,52 @@
+@import '../../../assets/scss/color-variables';
+@import '../../../assets/scss/radius-variables';
+@import '../../../assets/scss/spacers-variables';
+@import '../../../assets/scss/fonts-variables';
+
+@media (max-width:1150px) {
+    .banner-container-mobile {
+        display: block;
+    }
+
+    .banner-container-desktop {
+        display: none;
+    }
+}
+
+@media (min-width:1151px) {
+    .banner-container-mobile {
+        display: none;
+    }
+
+    .banner-container-desktop {
+        display: block;
+    }
+}
+
+:host {
+    width: 100%;
+}
+
+.banner-container-desktop {
+    width: 100%;
+    max-height: 480px;
+    position: relative;
+
+    .banner {
+        width: 100%;
+        max-height: 480px;
+        object-fit: contain;
+    }
+}
+
+.banner-container-mobile {
+    width: 100%;
+    max-height: 480px;
+    position: relative;
+
+    .banner {
+        width: 100%;
+        max-height: 480px;
+        object-fit: contain;
+    }
+}

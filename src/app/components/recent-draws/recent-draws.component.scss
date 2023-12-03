@@ -1,0 +1,214 @@
+@import '../../../assets/scss/color-variables';
+@import '../../../assets/scss/radius-variables';
+@import '../../../assets/scss/spacers-variables';
+@import '../../../assets/scss/fonts-variables';
+
+@media (max-width:1150px) {
+    .draw {
+        min-width: 264px !important;
+    }
+    .title {
+        font-size: $font-m!important;
+        margin-bottom: $spacer-m!important;
+    }
+}
+
+@media (min-width:1151px) {
+    .draws {
+        padding-bottom: $spacer-l;
+    }
+}
+
+:host {
+    width: 100%;
+}
+
+.recent-draws-info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: $spacer-l;
+    box-sizing: border-box;
+
+    .title {
+        width: 100%;
+        color: $white;
+        font-weight: 800;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $font-l;
+        margin-bottom: $spacer-xl;
+    }
+
+    .draws {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y: hidden;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar-track {
+            border-radius: $radius-s;
+            background-color: $primary;
+        }
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+            border-radius: $radius-s;
+            background-color: $primary;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: $radius-s;
+            background-color: $yellow;
+        }
+
+        .draw {
+            min-width: 324px;
+            border-radius: $radius-l;
+            background-color: $secondary;
+            color: $white;
+            margin: $spacer-m;
+            padding: $spacer-m;
+            font-size: $font-m;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            .date {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-weight: 800;
+                margin: $spacer-m 0;
+            }
+
+            .pot {
+                color: $yellow;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-size: $font-xxl;
+                font-weight: 800;
+                margin: $spacer-m 0 $spacer-xl 0;
+
+                img {
+                    width: 36px;
+                    height: 36px;
+                    margin: 0 $spacer-m;
+                }
+            }
+
+            .status {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: $spacer-s 0;
+
+                .placeholder {
+                    font-size: $font-s;
+                    color: #6B6D83;
+                }
+
+                .value {
+                    font-weight: 800;
+                    font-size: 16px;
+                    .win {
+                        color: $green;
+                    }
+                    .loose {
+                        color: $red;
+                    }
+                }
+            }
+
+            .bet-number {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: $spacer-s 0;
+
+                .placeholder {
+                    font-size: $font-s;
+                    color: #6B6D83;
+                }
+
+                .value {
+                    font-weight: 800;
+                    font-size: 16px;
+                }
+            }
+
+            .draw-number {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: $spacer-s 0;
+
+                .placeholder {
+                    font-size: $font-s;
+                    color: #6B6D83;
+                }
+
+                .value {
+                    font-weight: 800;
+                    font-size: 16px;
+                }
+            }
+
+            .participants {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: $spacer-m 0;
+
+                .placeholder {
+                    font-size: $font-s;
+                    color: #6B6D83;
+                }
+
+                .value {
+                    font-weight: 800;
+                    font-size: $font-m;
+                }
+            }
+
+            .winner {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: $spacer-m 0;
+
+                .placeholder {
+                    font-size: $font-s;
+                    color: #6B6D83;
+                }
+
+                .value {
+                    width: 150px;
+                    font-weight: 800;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: $font-m;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,37 @@
+<div class="navigation-container-desktop">
+    <img class="logo" src="/assets/images/logo.svg" (click)="navigateTo('home')">
+    <div class="navigation">
+        <div class="item" (click)="navigateTo('home')">HOME</div>
+        <div class="item" (click)="navigateTo('raffle')">RAFFLE</div>
+    </div>
+    <ng-container *ngIf="userIsConnected | async; else emptyBox">
+        <img class="user-icon" *ngIf="(userIsConnected | async)" (click)="navigateTo('stats')"
+            src="/assets/icons/user.png">
+    </ng-container>
+    <ng-template #emptyBox>
+        <div class="empty-box"></div>
+    </ng-template>
+</div>
+
+<div class="navigation-container-mobile">
+    <img class="menu-icon" src="/assets/icons/menu.png" (click)="onClickMenu()">
+    <img class="logo" src="/assets/images/logo.svg" (click)="navigateTo('home')">
+    <ng-container *ngIf="userIsConnected | async; else emptyBox">
+        <img class="user-icon" *ngIf="(userIsConnected | async)" (click)="navigateTo('stats')"
+            src="/assets/icons/user.png">
+    </ng-container>
+    <ng-template #emptyBox>
+        <div class="empty-box"></div>
+    </ng-template>
+</div>
+
+<div class="menu-container-mobile" *ngIf="showMenu">
+    <div class="item" (click)="navigateTo('home')">
+        <div class="placeholder">HOME</div>
+        <img class="icon" src="../../../assets/icons/right-arrow.png">
+    </div>
+    <div class="item" (click)="navigateTo('raffle')">
+        <div class="placeholder">RAFFLE</div>
+        <img class="icon" src="../../../assets/icons/right-arrow.png">
+    </div>
+</div>

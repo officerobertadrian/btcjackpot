@@ -1,0 +1,28 @@
+<div class="place-bet-container">
+    <div class="box-container">
+        <div class="date">{{nextDrawInfo.date}}</div>
+        <div class="hour">{{nextDrawInfo.hour}}</div>
+        <div class="prize">
+            <img class="win-icon" src="/assets/icons/btc.png">
+            <div class="prizes"><span>{{nextDrawInfo.cryptoPot}} BTC</span><span
+                    class="dollars-pot">({{nextDrawInfo.dollarsPot}} USD)</span></div>
+            <img class="win-icon" src="/assets/icons/btc.png">
+
+        </div>
+        <div class="draw">
+            <div class="placeholder">DRAW #</div>
+            <div class="value">{{nextDrawInfo.drawNumber}}</div>
+        </div>
+        <div class="participants">
+            <div class="placeholder">PARTICIPANTS</div>
+            <div class="value">{{nextDrawInfo.participants}}</div>
+        </div>
+        <div class="place-bet">
+            <div class="placeholder">PLACE YOUR BET</div>
+            <app-custom-input></app-custom-input>
+        </div>
+        <app-button [buttonType]="'raised'" [buttonBackground]="'yellow'" [buttonText]="'PLAY NOW'"
+            (onClick)="onClickPlayNow()"></app-button>
+
+    </div>
+</div>
